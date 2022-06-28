@@ -2,7 +2,7 @@
 
 ### 課題の説明
 snowdepth.csvには令和3年度積雪深観測値がCSV形式で記載されている。
-このファイルを読んで、各地域ごとの積雪量の合計を記載したsummary.csvを書き出すプログラムを作成しなさい。
+このファイルを読んで、各地域ごとの積雪量の合計を記載したsummary.txtを書き出すProgE3.mainメソッドを作成しなさい。
 
 - ファイル名はString型変数を定義して実行時引数として与えること
 - snowdepth.csvの最初の3列は`年,月,日`を意味し、以降は各地の降雪量(cm)である。降雪量は次の順で記載されている。
@@ -18,7 +18,7 @@ https://docs.oracle.com/javase/jp/8/docs/api/java/io/BufferedReader.html
 BufferedReader br = new BufferedReader(new FileReader("filename.txt"));
 String line = br.readLine();
 ```
-
+（注）「snowdepth.csv」をプロジェクト unitE3 のフォルダにコピーしてください。ただし、BlueJではCSVファイルをアイコン表示できないので、エクスプローラーで確認しましょう。
 ### snowdepth.csv
 ```
 2021,11,1,0,0,0,0,0,0,0,0,0,0,0,0,0
