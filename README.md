@@ -2,9 +2,9 @@
 
 ### 課題の説明
 snowdepth.csvには令和3年度積雪深観測値がCSV形式で記載されている。
-このファイルを読んで、各地域ごとの積雪量の合計を記載したsummary.txtを書き出すProgE3.mainメソッドを作成しなさい。
+このファイルを読んで、各地域の積雪量の合計を記載した`summary.txt`を書き出すProgE3.mainメソッドを作成しなさい。
 
-- ファイル名はString型変数を定義して実行時引数として与えること
+- なお、読み込むファイル名はmainメソッドにおいてString型変数で定義し、その値は実行時引数によって与えること
 - snowdepth.csvの最初の3列は`年,月,日`を意味し、以降は各地の降雪量(cm)である。降雪量は次の順で記載されている。
 
 `中央区,北区(太平),北区(あいの里),東区,白石区,厚別区,豊平区,清田区,南区(南31条西8丁目),南区(定山渓),西区(西野),西区(平和),手稲区
@@ -18,7 +18,7 @@ https://docs.oracle.com/javase/jp/8/docs/api/java/io/BufferedReader.html
 BufferedReader br = new BufferedReader(new FileReader("filename.txt"));
 String line = br.readLine();
 ```
-（注）「snowdepth.csv」をプロジェクト unitE3 のフォルダにコピーしてください。ただし、BlueJではCSVファイルをアイコン表示できないので、エクスプローラーで確認しましょう。
+注）BlueJで動作確認をするために、snowdepth.csvをプロジェクト unitE3 のフォルダにコピーしよう。ただし、BlueJではCSVファイルをアイコン表示できないし、mainメソッドの実行後に作られる`summary.txt`もBlueJを再起動するまではアイコン表示されないので、これらの存在はエクスプローラーを使って確認する。
 ### snowdepth.csv
 ```
 2021,11,1,0,0,0,0,0,0,0,0,0,0,0,0,0
@@ -32,7 +32,7 @@ String line = br.readLine();
 ...
 ```
 
-### summary.txt
+### summary.txt　（snowdepth.csvを読み込み、処理した結果を `地域, 積雪量の合計`　の形で列挙したもの）
 ```
 中央区, 5842
 北区(太平), 8872
@@ -48,6 +48,3 @@ String line = br.readLine();
 西区(平和), 9496
 手稲区, 7151
 ```
-
-### Notes
-- The JDK is installed on GitHub Actions machines, so you're also able to directly invoke `javac`, `java`, or any other CLI command included in the JDK. 
